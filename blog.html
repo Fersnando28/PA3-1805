@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyundai Elantra N - Blog Oficial</title>
+    <link rel="icon" type="image/png" href="imagenes/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="blog-styles.css">
+    <style>
+* {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #0b0c10;
+    color: #ffffff;
+    padding-top: 130px; 
+}
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(11, 12, 16, 0.95); 
+    border-bottom: 2px solid #1f2833;
+    padding: 15px 0;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+.blog-brand {
+    font-size: 32pt;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.blog-menu ul {
+    list-style: none;
+}
+.blog-menu ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.blog-menu ul li a {
+    color: #a9b3c4;
+    text-decoration: none;
+    font-size: 10pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+.blog-menu ul li a i {
+    margin-right: 5px;
+}
+.blog-menu ul li a:hover,
+.blog-menu ul li a.active {
+    color: #00aad2; 
+}
+.blog-container {
+    width: 90%;
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+}
+.main-blog-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+.article-meta {
+    margin: 30px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.article-title {
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.author-box {
+    display: flex;
+    align-items: center;
+    background-color: #1f2833;
+    padding: 8px 15px;
+    border-radius: 50px;
+}
+.author-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-right: 12px;
+    border: 2px solid #00aad2;
+}
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+.author-name {
+    font-weight: bold;
+    font-size: 10pt;
+}
+.author-role {
+    font-size: 8pt;
+    color: #00aad2;
+}
+.blog-text {
+    font-size: 11pt;
+    line-height: 1.8;
+    color: #c5c6c7;
+    text-align: justify; 
+}
+.blog-text .date {
+    font-size: 9pt;
+    color: #66fcf1;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.blog-text p {
+    margin-bottom: 20px;
+}
+.highlight-section {
+    display: flex;
+    background-color: #1a1a24;
+    border-left: 4px solid #00aad2;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 0 8px 8px 0;
+    align-items: center;
+}
+.highlight-icon i {
+    font-size: 30pt;
+    color: #00aad2;
+    margin-right: 20px;
+}
+.separator {
+    border: 0;
+    height: 1px;
+    background: #1f2833;
+    margin: 40px 0 20px 0;
+}
+.blog-footer {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.blog-footer p {
+    font-size: 10pt;
+    color: #a9b3c4;
+    margin-bottom: 15px;
+}
+.social-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 8px;
+}
+.social-icons i {
+    font-size: 14px;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 50%;
+    background-color: #1f2833;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.social-icons a:hover i {
+    background-color: #00aad2;
+    transform: translateY(-3px);
+}
+    </style>
+</head>
+<body>
+    <header class="fixed-header">
+        <h1 class="blog-brand">ELANTRA N</h1>
+        <nav class="blog-menu">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
+                <li><a href="nosotros.html"><i class="fa-solid fa-users"></i> NOSOTROS</a></li>
+                <li><a href="blog.html" class="active"><i class="fa-solid fa-calendar"></i> BLOG</a></li>
+                <li><a href="galeria.html"><i class="fa-solid fa-image"></i> GALERÍA</a></li>
+                <li><a href="videos.html"><i class="fa-solid fa-video"></i> VIDEOS</a></li>
+                <li><a href="contactos.html"><i class="fa-regular fa-address-card"></i>CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="blog-container">
+        <div class="main-blog-image">
+            <img src="imagenes/elantran1.jpg" alt="Hyundai Elantra N Perfil Deportivo">
+        </div>
+        <section class="article-meta">
+            <h2 class="article-title">El Placer de Conducir al Límite</h2>
+            
+            <div class="author-box">
+                <img src="imagenes/fotodeperfil.jpg" alt="Fernando Aguilar" class="author-img">
+                <div class="author-info">
+                    <span class="author-name">Fernando Aguilar</span>
+                    <span class="author-role">Asesor N Performance</span>
+                </div>
+            </div>
+        </section>
+        <article class="blog-text">
+            <p class="date">28/01/2025 — LIMA-PERÚ</p>
+            <p>¡Bienvenidos a la zona de alto rendimiento! Si estás aquí, es porque no buscas un sedán común y corriente. Lo que tienes frente a tus ojos es el majestuoso <strong>Hyundai Elantra N</strong>, un vehículo nacido en el circuito de Nürburgring y adaptado para domar las calles en tu día a día. Como asesor, te aseguro que este auto no se explica, se experimenta en la piel.</p>
+            <div class="highlight-section">
+                <div class="highlight-icon">
+                    <i class="fa-solid fa-gauge-high"></i>
+                </div>
+                <div class="highlight-text">
+                    <p>Bajo ese imponente capó descansa un corazón turboalimentado de 2.0 litros y 4 cilindros que desata de inmediato 276 caballos de fuerza directos al eje delantero. Pero aquí viene el verdadero secreto para los entusiastas: al presionar el botón rojo <em>"N Grin Shift"</em> en el volante, liberas una sobrepresión temporal que eleva la potencia a 286 caballos. Es adrenalina instantánea lista para dejar atrás a cualquier rival del segmento.</p>
+                </div>
+            </div>
+
+            <p>La ingeniería de este sedán deportivo no se limita a la velocidad en línea recta. Su suspensión adaptativa regula la rigidez del chasis segundo a segundo, permitiéndote pasar de un viaje urbano suave y elegante a una configuración de pista extremadamente rígida y precisa con solo un clic. Todo esto acompañado por el rugido real de su escape deportivo con válvulas variables que petardea en cada reducción de marcha, recordándote que estás al mando de una máquina seria.</p>
+            
+            <p>Por dentro, la experiencia digital te envuelve con su doble pantalla de 10.3 pulgadas y butacas de carreras que te sujetan perfectamente en las curvas más cerradas. No dejes pasar la oportunidad de agendar tu prueba de manejo hoy mismo. El inventario es exclusivo y las emociones que te esperan a bordo de este Elantra N son simplemente inigualables.</p>
+        </article>
+        <hr class="separator">
+        <footer class="blog-footer">
+            <p>Síguenos en nuestras redes sociales:</p>
+            <div class="social-icons">
+                <a href="https://x.com/Hyundai_Global" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/Hyundaiworldwide/" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/hyundai/?hl=es" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@hyundai" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>

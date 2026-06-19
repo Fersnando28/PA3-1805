@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Hyundai Elantra N</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="nosotros.css">
+    <link rel="icon" type="image/png" href="imagenes/favicon.png">
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0b0c10; 
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header-navigation {
+            width: 100%;
+            text-align: center;
+            padding: 25px 0 15px 0;
+            background-color: #0b0c10;
+        }
+        .brand-title-mini {
+            font-size: 28pt;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-bottom: 15px;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
+        }
+        .main-menu {
+            margin-bottom: 15px;
+        }
+        .main-menu ul {
+            list-style: none;
+            text-align: center;
+        }
+        .main-menu ul li {
+            display: inline-block;
+            margin: 0 12px; 
+        }
+        .main-menu ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 11pt;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+        .main-menu ul li a:hover,
+        .main-menu ul li a.active {
+            color: #00aad2;
+        }
+        .page-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto 50px auto;
+            background-color: transparent;
+            flex: 1; 
+        }
+        .section-title-bar {
+            background-color: #0f1423; 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section-title-bar h2 {
+            font-size: 18pt;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr; 
+            gap: 30px;
+        }
+        .main-text-column h3 {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        .main-text-column p {
+            font-size: 11pt;
+            line-height: 1.7;
+            color: #cccccc;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .main-text-column strong {
+            color: #00aad2; 
+        }
+        .secondary-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .img-box {
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background-color: #12141c;
+            padding: 5px;
+        }
+        .img-box img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+        }
+        .side-image-column {
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background-color: #12141c;
+            padding: 5px;
+        }
+        .side-image-column img {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        .main-footer {
+            background-color: #06070a;
+            padding: 25px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .footer-top-bar p {
+            font-size: 10pt;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+        .footer-social p {
+            font-size: 10pt;
+            color: #888888;
+            margin-bottom: 10px;
+        }
+        .social-icons a {
+            color: #ffffff;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 8px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .social-icons i {
+            font-size: 14px;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.08);
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .social-icons a:hover i {
+            background-color: #00aad2;
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr; 
+            
+            .side-image-column img {
+                height: 250px;
+                min-height: auto;
+            }
+        }
+        }
+   </style>
+</head>
+<body>
+    <header class="header-navigation">
+        <h1 class="brand-title-mini">ELANTRA N</h1>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
+                <li><a href="nosotros.html" class="active"><i class="fa-solid fa-users"></i> NOSOTROS</a></li>
+                <li><a href="blog.html"><i class="fa-solid fa-calendar"></i> BLOG</a></li>
+                <li><a href="galeria.html"><i class="fa-solid fa-image"></i> GALERIA</a></li>
+                <li><a href="videos.html"><i class="fa-solid fa-video"></i> VIDEOS</a></li>
+                <li><a href="contactos.html"><i class="fa-regular fa-address-card"></i> CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="page-container">
+        <div class="section-title-bar">
+            <h2>Nosotros</h2>
+        </div>
+        <div class="content-grid">
+            <div class="main-text-column">
+                <h3>¿Quiénes somos?</h3>
+                <p>
+                    En Hyundai, no solo fabricamos automóviles; creamos 
+                    experiencias impulsadas por la innovación, la tecnología 
+                    y la pasión por el rendimiento. Desde nuestra fundación, 
+                    nos hemos comprometido a desafiar los límites de lo convencional, 
+                    llevando la ingeniería automotriz a un nuevo nivel donde el 
+                    conductor es siempre el protagonista absoluto.
+                </p>
+                <p>
+                    Nuestra división <strong>N Performance</strong> nace directamente 
+                    en las pistas de carreras más exigentes del mundo, como el circuito 
+                    de Nürburgring. Es allí donde el Hyundai Elantra N fue perfeccionado, 
+                    buscando transformar el trayecto diario en una descarga pura de adrenalina, 
+                    balanceando un diseño aerodinámico agresivo con una potencia implacable en 
+                    línea recta y curvas cerradas.
+                </p>
+                <div class="secondary-images">
+                    <div class="img-box">
+                        <img src="imagenes/ceo.jpg" alt="Ingeniería Hyundai N">
+                    </div>
+                    <div class="img-box">
+                        <img src="imagenes/empleados.jpeg" alt="Equipo de desarrollo de competición">
+                    </div>
+                </div>
+            </div>
+            <div class="side-image-column">
+                <img src="imagenes/JVBR3N7QO5CXXL7JP5XG4DSD6Y.jpg" alt="Rendimiento en carretera Hyundai N">
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-social">
+            <p>Síguenos en nuestras redes sociales:</p>
+            <div class="social-icons">
+                <a href="https://x.com/Hyundai_Global"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/Hyundaiworldwide/" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/hyundai/?hl=es" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@hyundai" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

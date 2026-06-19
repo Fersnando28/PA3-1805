@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Hyundai Elantra N</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="contactos.css">
+    <link rel="icon" type="image/png" href="imagenes/favicon.png">
+    <style>
+        * {
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body {
+            background-color: #0b0c10;
+            color: #ffffff;
+            overflow-y: auto; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header-navigation {
+            width: 100%;
+            text-align: center;
+            padding: 25px 0 15px 0;
+            background-color: #0b0c10;
+        }
+        .brand-title-mini {
+            font-size: 28pt;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-bottom: 15px;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
+        }
+        .main-menu ul {
+            list-style: none;
+            text-align: center;
+        }
+        .main-menu ul li {
+            display: inline-block;
+            margin: 0 12px;
+        }
+        .main-menu ul li a {
+            color: #ffffff !important;
+            text-decoration: none;
+            font-size: 11pt;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+        .main-menu ul li a:hover,
+        .main-menu ul li a.active {
+            color: #00aad2 !important;
+        }
+        .contact-section-wrapper {
+            width: 90%;
+            max-width: 950px;
+            margin: 20px auto 50px auto;
+            flex: 1;
+        }
+        .contact-gradient-box {
+            background-image: linear-gradient(135deg, #161925 0%, #0b0c10 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 35px;
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        .contact-info-column h3, 
+        .contact-form-column h3 {
+            font-size: 15pt;
+            font-weight: bold;
+            color: #00aad2; 
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+        .contact-table th, .contact-table td {
+            padding: 12px 8px;
+            text-align: left;
+            vertical-align: top;
+            font-size: 11pt;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .contact-table th {
+            width: 30%;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .contact-table td {
+            color: #cccccc;
+        }
+        .contact-info-column h4 {
+            font-size: 13pt;
+            color: #ffffff;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #00aad2;
+            padding-bottom: 4px;
+            display: inline-block;
+        }
+        .schedule-box p {
+            font-size: 11pt;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+        .contact-decor-img {
+            margin-top: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 4px;
+            background-color: #06070a;
+            display: inline-block;
+        }
+        .contact-decor-img img {
+            max-width: 100%;
+            height: 140px;
+            display: block;
+            object-fit: cover;
+        }
+        .custom-form .form-group {
+            margin-bottom: 15px;
+        }
+        .custom-form label {
+            display: block;
+            font-size: 10.5pt;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+        .custom-form input[type="text"],
+        .custom-form input[type="tel"],
+        .custom-form input[type="email"],
+        .custom-form textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #06070a;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-size: 10.5pt;
+            transition: border-color 0.3s;
+        }
+        .custom-form input:focus,
+        .custom-form textarea:focus {
+            outline: none;
+            border-color: #00aad2;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #212529; 
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 11pt;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: 10px;
+        }
+        .btn-submit:hover {
+            background-color: #00aad2;
+            color: #ffffff;
+            border-color: #00aad2;
+        }
+        .map-container {
+            border: 4px solid #ffffff; 
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .map-container iframe {
+            display: block;
+        }
+        .main-footer {
+            background-color: #06070a;
+            padding: 25px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .footer-top-bar {
+            background-color: #0f1423;
+            padding: 10px 0;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .footer-social p {
+            font-size: 10pt;
+            color: #888888;
+            margin-bottom: 10px;
+        }
+        .social-icons a {
+            color: #ffffff;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 8px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .social-icons i {
+            font-size: 14px;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.08);
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .social-icons a:hover i {
+            background-color: #00aad2;
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+        @media (max-width: 768px) {
+            .contact-gradient-box {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-navigation">
+        <h1 class="brand-title-mini">ELANTRA N</h1>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
+                <li><a href="nosotros.html"><i class="fa-solid fa-users"></i> NOSOTROS</a></li>
+                <li><a href="blog.html"><i class="fa-solid fa-calendar"></i> BLOG</a></li>
+                <li><a href="galeria.html"><i class="fa-solid fa-image"></i> GALERIA</a></li> 
+                <li><a href="videos.html"><i class="fa-solid fa-video"></i> VIDEOS</a></li>
+                <li><a href="contactos.html" class="active"><i class="fa-regular fa-address-card"></i> CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contact-section-wrapper">
+        <div class="contact-gradient-box">
+            <div class="contact-info-column">
+                <h3>Información de Contacto</h3>
+                <table class="contact-table">
+                    <tr>
+                        <th>Dirección:</th>
+                        <td>Av. Javier Prado Este 5475, La Molina 15023<br>Lima Metropolitana, Perú</td>
+                    </tr>
+                    <tr>
+                        <th>Teléfonos:</th>
+                        <td>993 160 000 | (01) 610-0000</td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td>contacto@wigomotors.com</td>
+                    </tr>
+                </table>
+                <h4>Horario de Atención Presencial</h4>
+                <div class="schedule-box">
+                    <p><strong>Área de Ventas:</strong></p>
+                    <p>De Lunes a Viernes de 9:00 a.m. a 7:00 p.m.</p>
+                    <p>Sábados y Domingos de 10:00 a.m. a 4:00 p.m.</p>
+                </div>
+                <div class="contact-decor-img">
+                    <img src="imagenes/IMG_9891-1024x683.jpg" alt="Hyundai La Molina Wigo Motors">
+                </div>
+            </div>
+            <div class="contact-form-column">
+                <h3>Déjanos tu comentario</h3>
+                <form action="#" method="POST" class="custom-form">
+                    <div class="form-group">
+                        <label for="fullname">Nombre y Apellido</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Ej. Juan Pérez">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Celular*</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="999 999 999">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico*</label>
+                        <input type="email" id="email" name="email" required placeholder="nombre@dominio.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="ruc">RUC - Empresa (Opcional)</label>
+                        <input type="text" id="ruc" name="ruc">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Detalla 
+                        tu experiencia o consulta aquí sobre el Elantra N..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.808046959302!2d-
+            76.96241063878287!3d-12.073747100438336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!
+            1s0x9105c7add3d52829%3A0x1508fe58fc4e0a08!2sHyundai%20La%20Molina%20%7C%20Concesionario%
+            20Wigo%20Motors!5e0!3m2!1ses-419!2spe!4v1781831381515!5m2!1ses-419!2spe" width="100%" 
+            height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-social">
+            <p>Síguenos en nuestras redes sociales:</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
